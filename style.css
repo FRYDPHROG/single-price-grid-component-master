@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --Karla: 'Karla';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Karla);
+    background-color: var(--Grayish-Blue);
+}
+
+.main-card{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+
+.top-halve{
+    width: 100%;
+    background-color: var(--Light-Gray);
+    padding: 2.5rem;
+    border-radius: 10px 10px 0 0;
+}
+
+h1{
+    color: var(--Cyan);
+    margin-bottom: 1.5rem;
+    font-size: 27px;
+}
+
+h2{
+    color: var(--Bright-Yellow);
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.top-halve p{
+    color: var(--Grayish-Blue);
+}
+
+.bottom-halve{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-halve{
+    width: 50%;
+    padding: 2.5rem;
+}
+
+h3{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+strong{
+    color: white;
+    font-size: 25px;
+}
+
+.bottom-halve p{
+    color: var(--Light-Gray);
+    margin-bottom: 1.5rem;
+}
+
+button{
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+    font-weight: bold;
+}
+
+span{
+    color: var(--Light-Gray);
+}
+
+li{
+    list-style: none;
+    color: white;
+}
+
+.left{
+    background-color: var(--Cyan);
+    opacity: .8;
+    border-bottom-left-radius: 10px;
+}
+
+.right{
+    background-color: var(--Cyan);
+    border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 649px){
+    .main-card{
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px){
+    .main-card{
+        width: 85%;
+        margin: 5rem;
+    }
+
+    .top-halve{
+        padding: 1.5rem;
+    }
+
+    .bottom-halve{
+        flex-direction: column;
+    }
+    
+    .sub-halve{
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .left{
+        border-radius: 0;
+    }
+
+    .right{
+        border-radius: 0 0 10px 10px;
+    }
+}
